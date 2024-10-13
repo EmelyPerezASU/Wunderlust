@@ -220,12 +220,14 @@ header p{
     display:block;
     padding:8px 10px;
     background-color: #F6D64A;
-    font-size: 15px;
+    font-size: 25px;
+    text-align: center;
 
 }
 nav{
     position: relative;
     display: inline-block;
+    
    
 }
 nav a{
@@ -236,6 +238,8 @@ nav a{
 }
 nav ul{
     display: none;
+    
+
 
 }
 nav a:hover{
@@ -248,13 +252,14 @@ nav a:hover{
     background-color: #55BCD5;
     list-style-type: none;
     list-style: none;
+   
 }
 #menu-toggle li a {
     display:block;
     color: #000000;
-    font-size: 12px;
+    font-size: 20px;
     text-transform: uppercase;
-    padding: 8px 10px ;
+    padding: 10px 10px ;
 }
 #menu-toggle input:checked ~ ul {
     display: block;
@@ -441,9 +446,10 @@ img{
     text-transform: uppercase;
 }
 
-input[type="email"],input[type="text"], input[type="tel"], input[type="custom"]{
+input[type="email"],input[type="text"], input[type="tel"], input[type="submit"]{
   width:100%;
-  padding:15px;
+  margin-top: 20px;
+  padding:20px;
   display: block;  
   box-sizing: border-box;
   border: #9B26B0 3px solid;
@@ -453,12 +459,14 @@ input[type="email"],input[type="text"], input[type="tel"], input[type="custom"]{
 .radio-label {
     display: flex;
     align-items: center;
-    padding:15px;
+    padding:25px;
+   
 }
 
 fieldset{
     margin:0;
     padding:0;
+    border: transparent;
 
 }
 
@@ -500,7 +508,7 @@ position: relative;
     height: auto;
     box-sizing: border-box;
     border: #9B26B0 3px solid;
-    padding: 15px;
+    padding: 20px;
     font-size: 15px;
     appearance: none;
 }
@@ -519,7 +527,7 @@ position: relative;
 }
 input [type="submit"]{
     width: 100%;
-    border: none;
+    border: transparent;
     display: block;
     
     background-color: #9B26B0;
@@ -547,18 +555,28 @@ footer a{
 /*-----@media----*/ 
 
 
-@media screen and (min-width: 1335px) {
+@media screen and (min-width: 1300px) {
     #logo {
       grid-column: 1;
-      grid-row: 1 / 4;
+      grid-row: 1/ 4;
+
     }
 
+    
 header {
     display: grid;
-    align-items: center;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 200px auto auto;
+    align-items: left;
+
   }
+header div{
+margin:10px auto;
+max-width: 1300px;
+display: grid;
+grid-template-columns: 1fr 3fr 3fr;
+grid-template-rows: auto auto ;
+gap: 0.5rem;
+align-items: center; 
+}
   h1 {
     grid-row: 1;
     grid-column: 2;
@@ -574,17 +592,48 @@ header {
     grid-column: 2;
   }
 
+
   nav {
-    grid-row: 1;
-    grid-column: 3;
-    margin-top: -50px;
-    justify-self: end;
-    justify-self: end;
+grid-column-start: 1;
+grid-column-end: -1 ;
+  }
+  nav a{
+    background-color: #FFFFFF;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.25rem;
+  }
+  nav ul{
+    background-color: transparent;
   }
 
-  #menu-toggle li {
-    padding: 1px;
+  #menu-toggle label{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
   }
+   
+
+
+  #menu-toggle li {
+    margin-top: 10px;
+    list-style: none;
+    
+  }
+  #menu-toggle ul{
+    display:flex;
+    gap: 30px;
+    color:#000000;
+    background-color:transparent;
+    list-style-type: none;
+    list-style: none;
+    font-size:45px; 
+
+}
 
   #intro h2 {
     grid-row: 1;
@@ -795,8 +844,8 @@ header {
     margin-right: 100px;
     text-decoration: none;
   }
+
+
 }
-
-
 
 
