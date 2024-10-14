@@ -102,9 +102,12 @@ main, header, footer{
   width: 100%;
 }
 
-header, footer{
+ header,footer{
   padding: 3em;
 }
+
+
+
 
 main{
   max-width: 1380px;
@@ -169,7 +172,7 @@ h4{
 /*--start of background--*/
 header{
   background-image: linear-gradient(#55BCD5,#FFFFFF );
-  text-align:left; 
+ 
 }
 #plan{
   background-color:#F6D64A ;
@@ -190,34 +193,49 @@ footer{
 }
 
 /*--end of background--*/
-/*--header font--*/
+
+/*--header content--*/ 
+
+ .logo, menu{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 3rem 0;
+  text-decoration: none; 
+}
+
 header h1{
   font-size: 50px;
+  margin: 25px;
+  padding-top: 50px;
+  padding-left: 5px;
+  display: inline-block;
+
+ 
 }
 header p{
   font-size:20px;
   margin-bottom:15px;
+  display: inline-block;
+ 
 }
 
-/*--end of header font--*/
-
-
-
-
-/*--header content--*/ 
 
 #logo{
-  display:inline-block;
+  padding: 0%;
+display: inline-block;
+  max-width: 100%;
 }
+
 
 #menu-toggle input{
   display:none;
-  
 }
 
 #menu-toggle label{
   display:block;
-  padding:8px 10px;
+  padding:20px 100px;
   background-color: #F6D64A;
   font-size: 25px;
   text-align: center;
@@ -226,12 +244,13 @@ header p{
 nav{
   position: relative;
   display: inline-block;
-  
+  justify-content: space-between;
+
  
 }
 nav a{
   margin-bottom: 15px;
-  text-align: center;
+  text-align: end;
   cursor: pointer;
 
 }
@@ -510,6 +529,7 @@ position: relative;
   padding: 20px;
   font-size: 15px;
   appearance: none;
+  
 }
 
 .custom-select .focus{
@@ -523,12 +543,12 @@ position: relative;
   border-left: transparent 5px solid;
   border-top: #9B26B0 10px solid;
   pointer-events: none;
+  
 }
-input [type="submit"]{
+input[type="submit"]{
   width: 100%;
   border: transparent;
   display: block;
-  
   background-color: #9B26B0;
   color: #ffffff;
   text-transform: uppercase;
@@ -554,7 +574,7 @@ footer a{
 /*-----@media----*/ 
 
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1320px) {
   #logo {
     grid-column: 1;
     grid-row: 1/ 4;
